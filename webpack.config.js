@@ -23,7 +23,7 @@ module.exports = {
   devtool,
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     filename: "index.[contenthash].js",
     clean: true,
   },

@@ -7,7 +7,7 @@
     "build": "SET NODE_ENV=production webpack",
     "build-dev": "webpack",
     "start": "webpack serve",
-    "clear": "rd /s /q dist"
+    "clear": "rd /s /q docs"
   },
   "keywords": [],
   "author": "",
