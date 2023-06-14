@@ -1,0 +1,113 @@
+@import "../libs/adaptFontSize";
+.mainhero {
+  margin-top: 80px;
+  margin-bottom: 50px;
+  &__wrapper {
+  }
+  &__video {
+    max-width: 1340px;
+    margin: 0 auto;
+    min-height: 450px;
+    height: 70.1vh;
+    position: relative;
+    &::before {
+      content: "";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      font-size: 24px;
+      font-weight: 700;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background: rgba($black, 0.4);
+    }
+    &::after {
+      content: "Lotus";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      text-transform: uppercase;
+      font-size: 74px;
+      font-weight: 700;
+      color: $white87;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      background: url("././img/Group80.svg") center no-repeat;
+    }
+  }
+  &__video-intro {
+    position: relative;
+    min-height: 450px;
+    height: 70vh;
+    overflow: hidden;
+
+    &::before {
+      content: "mass";
+      position: absolute;
+      text-transform: uppercase;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #ffffffde;
+      @include adaptiv-font(200, 98, 1280);
+      font-weight: 700;
+      font-family: Arial, sans-serif;
+      height: 70vh;
+      top: 72px;
+      left: 0;
+      z-index: 2;
+    }
+    &::after {
+      content: "age";
+      position: absolute;
+      text-transform: uppercase;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 1px #ffffffde;
+      @include adaptiv-font(200, 98, 1280);
+      font-weight: 700;
+      font-family: Arial, sans-serif;
+      bottom: 72px;
+      right: 0;
+      z-index: 2;
+    }
+  }
+  &__video-media {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width: 767.98px) {
+  .mainhero {
+    &__video-intro {
+      &::before {
+        top: 0px;
+        -webkit-text-stroke: 2px #ffffffde;
+      }
+      &::after {
+        bottom: 0px;
+        -webkit-text-stroke: 2px #ffffffde;
+      }
+    }
+  }
+}
+@media (min-width: 1340.98px) {
+  .mainhero {
+    &__video {
+      padding: 0 30px;
+      &::before {
+        width: calc(100% - 60px);
+        left: 30px;
+      }
+    }
+  }
+}
